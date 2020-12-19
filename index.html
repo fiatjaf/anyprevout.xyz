@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>BIP-118</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="SIGHASH_ANYPREVOUT, the super powerful soft-fork that fulfills Satoshi's vision."
+/>
+<link rel="stylesheet" href="/main.css" />
+
+<h1>SIGHASH_ANYPREVOUT,</h1>
+
+<p>
+  <code>SIGHASH_ANYPREVOUT</code>, or
+  <a href="https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki"
+    >BIP-118</a
+  >
+  (previously named <code>SIGHASH_NOINPUT</code>), is a soft-fork that allows a
+  transaction to be signed without reference to any specific previous output,
+  such that later any output with a matching signature can be dynamically
+  plugged in.
+</p>
+
+<h2>Use Cases</h2>
+
+<ol>
+  <li>
+    <a href="https://fiatjaf.alhur.es/ffdfe772.html">Eltoo</a
+    ><a href="https://www.youtube.com/watch?v=3ZjymCOmn_A"
+      >-based Lightning Channels</a
+    >, which allow for
+    <ul>
+      <li>Safer channel management without penalty transactions.</li>
+      <li>Lightweight and almost free watchtowers.</li>
+      <li>
+        <a
+          href="https://diyhpl.us/wiki/transcripts/scalingbitcoin/tokyo-2018/multi-party-channels-in-the-utxo-model-challenges-and-opportunities/"
+          >Multiparty channels</a
+        >
+        (also known as "channel factories").
+      </li>
+      <li>
+        Less fee estimation problems that cause fee overpayments and unwanted
+        channel closes.
+      </li>
+      <li>
+        The
+        <a href="https://global-mesh-labs.gitbook.io/lot49/">Lot49</a> protocol
+        for Lightning-powered low-latency mesh networks.
+      </li>
+      <li>
+        <a
+          href="https://lists.linuxfoundation.org/pipermail/lightning-dev/2020-January/002448.html"
+          >Layered commitments</a
+        >
+        that further simplify channels.
+      </li>
+      <li>
+        Overall much simpler protocol flow that allows for easier implementation
+        of other ideas on top of Lightning.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=eG8th2x8XHY">Blind Statechains</a>,
+    a protocol for off-chain transfer of UTXOs using blind servers or
+    federations and <a href="https://blockstream.com/eltoo.pdf">Eltoo</a>.
+    <a
+      href="https://medium.com/@RubenSomsen/statechains-non-custodial-off-chain-bitcoin-transfer-1ae4845a4a39"
+      >Read more about it</a
+    >.
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=N2ow4Q34Jeg">Spacechains</a>,
+    blindly merge-mined chains that serve the Bitcoin ecosystem and do
+    interesting things despite not having a 2-way peg.
+    <a
+      href="https://gist.github.com/RubenSomsen/5e4be6d18e5fa526b17d8b34906b16a5"
+      >Read more about it here</a
+    >
+    and
+    <a href="https://fiatjaf.alhur.es/a675823c.html"
+      >see here an alternative explanation</a
+    >
+    with a different name.
+  </li>
+  <li>
+    <a
+      href="https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/"
+      >Safer Bitcoin Vaults</a
+    >.
+  </li>
+  <li>
+    Anything that could possibly be done with
+    <a href="https://utxos.org/uses/"><code>OP_CHECKTEMPLATEVERIFY</code></a
+    >, since it's possible do full covenants using
+    <a
+      href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-June/017036.html"
+      >this nice little <code>ANYPREVOUT</code> trick</a
+    >.
+  </li>
+</ol>
+
+<footer>
+  <p>
+    If you want to include or fix something or you have any suggestions, go to
+    <a href="https://github.com/fiatjaf/bip118">the GitHub repo</a> or talk
+    about it on <a href="https://t.me/lightningd">Tele</a
+    ><a href="https://t.me/spacechains">gram</a>.
+  </p>
+</footer>

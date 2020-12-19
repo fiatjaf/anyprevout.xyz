@@ -1,0 +1,272 @@
+body {
+  font-family: 'Open Sans', Arial;
+  color: #454545;
+  font-size: 16px;
+  margin: 2em auto;
+  max-width: 800px;
+  padding: 1em;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    /* Don't let the motherfucking sun disturb you */
+    background-color: #000;
+  }
+
+  html body {
+    color: #d9d9d9;
+  }
+
+  html #invmode {
+    color: #fff;
+    background-color: #000;
+  }
+
+  html blockquote {
+    color: #d3c9be;
+  }
+
+  html blockquote::before {
+    color: #b8b8b8;
+  }
+
+  html a {
+    color: #00a2e7;
+  }
+
+  html a:visited {
+    color: #ca1a70;
+  }
+
+  html span.wr {
+    color: #d24637;
+  }
+
+  html span.mfw {
+    color: #b00000;
+  }
+}
+
+a {
+  color: #07a;
+}
+
+a:visited {
+  color: #941352;
+}
+
+span.citneed {
+  vertical-align: top;
+  font-size: 0.7em;
+  padding-left: 0.3em;
+}
+
+small {
+  font-size: 0.4em;
+}
+
+p.st {
+  margin-top: -1em;
+}
+
+div.fancyPositioning div.picture-left {
+  float: left;
+  width: 40%;
+  overflow: hidden;
+  margin-right: 1em;
+}
+
+div.fancyPositioning div.picture-left img {
+  width: 100%;
+}
+
+div.fancyPositioning div.picture-left figure {
+  margin: 10px;
+}
+
+div.fancyPositioning div.picture-left figure figcaption {
+  font-size: 0.7em;
+}
+
+div.fancyPositioning div.tleft {
+  float: left;
+  width: 55%;
+}
+
+div.fancyPositioning div.tleft p:first-child {
+  margin-top: 0;
+}
+
+div.fancyPositioning::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+ul li img {
+  height: 1em;
+}
+
+blockquote {
+  color: #456;
+  margin-left: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+blockquote span {
+  float: left;
+  margin-left: 1rem;
+  padding-top: 1rem;
+}
+
+blockquote author {
+  display: block;
+  clear: both;
+  font-size: 0.6em;
+  margin-left: 2.4rem;
+  font-style: oblique;
+}
+
+blockquote author:before {
+  content: '- ';
+  margin-right: 1em;
+}
+
+blockquote::before {
+  font-family: 'Times New Roman', Times, Arial;
+  color: #666;
+  content: open-quote;
+  font-size: 2.2em;
+  font-weight: 600;
+  float: left;
+  margin-top: 0em;
+  margin-right: 0.2rem;
+  width: 1.2rem;
+}
+
+blockquote::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    text-align: left;
+  }
+
+  div.fancyPositioning div.picture-left {
+    float: none;
+    width: inherit;
+  }
+
+  div.fancyPositioning div.tleft {
+    float: none;
+    width: inherit;
+  }
+
+  blockquote span {
+    width: 80%;
+  }
+
+  blockquote author {
+    padding-top: 1em;
+    width: 80%;
+    margin-left: 15%;
+  }
+
+  blockquote author::before {
+    content: '';
+    margin-right: inherit;
+  }
+}
+
+span.visited {
+  color: #941352;
+}
+
+span.visited-maroon {
+  color: #85144b;
+}
+
+span.wr {
+  color: #c0392b;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+button.cont-inv {
+  cursor: pointer;
+  border-radius: 2px;
+  position: fixed;
+  right: 10px;
+  font-size: 0.8em;
+  text-decoration: underline;
+  border: 0px;
+  padding: 2px 5px 2px 5px;
+}
+
+span.sb {
+  cursor: not-allowed;
+  color: #0000ee;
+}
+
+span.sv {
+  cursor: not-allowed;
+  color: #551a8b;
+}
+
+span.foufoufou {
+  color: #444;
+  font-weight: bold;
+}
+
+span.foufoufou::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  background-color: #444;
+}
+
+span.foufivfoufivfoufiv {
+  color: #454545;
+  font-weight: bold;
+}
+
+span.foufivfoufivfoufiv::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  background-color: #454545;
+}
+
+span.mfw {
+  color: #730000;
+}
+
+a.kopimi {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.kopimi img.kopimi {
+  display: block;
+  height: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.fakepre {
+  font-family: monospace;
+  font-size: 0.9em;
+}
