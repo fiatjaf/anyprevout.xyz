@@ -8,13 +8,13 @@
 
 <p>
   <code>SIGHASH_ANYPREVOUT</code>, or
-  <a href="https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki"
+  <a href="https://bips.xyz/118"
     >BIP-118</a
   >
   (previously named <code>SIGHASH_NOINPUT</code>), is a soft-fork that allows a
   transaction to be signed without reference to any specific previous output,
   such that later any output with a matching signature can be dynamically
-  plugged in.
+  added later.
 </p>
 
 <h2>Use Cases</h2>
@@ -89,7 +89,7 @@
       <li>
         <a href="https://www.youtube.com/watch?v=eG8th2x8XHY"
           >Blind Statechains</a
-        >, a protocol for off-chain transfer of UTXOs using blind servers or
+        >, a protocol for off-chain transfer of UTXOs using blind servers and/or
         federations as semi-trusted third-parties.
         <a
           href="https://medium.com/@RubenSomsen/statechains-non-custodial-off-chain-bitcoin-transfer-1ae4845a4a39"
@@ -105,10 +105,10 @@
           </li>
           <li>
             To open Lightning channels on top of these UTXOs. And then these
-            channels can be transferred to others without touching the chain.
+            channels can be transferred to others without the chain being touched.
           </li>
           <li>
-            To implement some version of the
+            To implement some variation of the
             <a href="https://zmnscpxj.github.io/bitcoin/unchained.html"
               >Smart Contracts Unchained</a
             >
@@ -119,9 +119,9 @@
     </ul>
   </li>
   <li>
-    <b>Covenants</b>, a way to make sure one transaction can only be spent by an
-    specific other (<code>OP_CHECKTEMPLATEVERIFY</code>'s purpose) can be
-    achieved by using
+    <b>Covenants</b>, a way to make sure <b>one transaction can only be spent by an
+    specific other</b> can be
+    achieved using
     <a
       href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-June/017036.html"
       >this secret little trick</a
@@ -131,7 +131,7 @@
 
     <br />
 
-    These covenants enable:
+    These covenants enable very important things such as:
     <ul>
       <li>
         <a href="https://www.youtube.com/watch?v=N2ow4Q34Jeg">Spacechains</a>,
@@ -152,11 +152,11 @@
       <li>
         And
         <a href="https://utxos.org/uses/"
-          >anything that could possibly be done with
+          >all use cases enabled by
           <code>OP_CHECKTEMPLATEVERIFY</code></a
         >
-        (although some of the use cases listed there may not be worth doing
-        because of the transaction sizes).
+        (although in most of these examples <code>OP_CHECKTEMPLATEVERIFY</code> is
+        more space-efficient, there are other tradeoffs that weight on both sides).
       </li>
     </ul>
   </li>
