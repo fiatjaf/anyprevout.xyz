@@ -8,13 +8,11 @@
 
 <p>
   <code>SIGHASH_ANYPREVOUT</code>, or
-  <a href="https://bips.xyz/118"
-    >BIP-118</a
-  >
+  <a href="https://bips.xyz/118">BIP-118</a>
   (previously named <code>SIGHASH_NOINPUT</code>), is a soft-fork that allows a
   transaction to be signed without reference to any specific previous output,
-  such that later any output with a matching signature can be dynamically
-  added later.
+  such that later any output with a matching signature can be dynamically added
+  later.
 </p>
 
 <h2>Use Cases</h2>
@@ -37,7 +35,11 @@
     <a href="https://blockstream.com/eltoo.pdf">the whitepaper</a> or this
     <a href="https://fiatjaf.alhur.es/ffdfe772.html"
       >more approachable explanation</a
-    >, or listen to <a href="https://bitcoinmagazine.com/technical/how-sighash-anyprevout-and-eltoo-could-improve-the-lightning-network">this podcast episode that explains it</a>.
+    >, or listen to
+    <a
+      href="https://bitcoinmagazine.com/technical/how-sighash-anyprevout-and-eltoo-could-improve-the-lightning-network"
+      >this podcast episode that explains it</a
+    >.
     <br />
 
     With Eltoo we can do:
@@ -51,8 +53,8 @@
           <li>Lightweight and almost free watchtowers.</li>
           <li>Safer channel management without penalty transactions.</li>
           <li>
-            Ability to close a channel entirely to one side, without toxic change
-            being left at the other side.
+            Ability to close a channel entirely to one side, without toxic
+            change being left at the other side.
           </li>
           <li>Much easier channel backups.</li>
           <li>
@@ -86,7 +88,15 @@
         <a
           href="https://medium.com/@RubenSomsen/statechains-non-custodial-off-chain-bitcoin-transfer-1ae4845a4a39"
           >Read the original proposal</a
-        > or <a href="https://bitcoinmagazine.com/technical/statechains-sending-keys-not-coins-to-scale-bitcoin-off-chain">this more approachable explanation</a>, or listen to <a href="https://www.youtube.com/watch?v=2XLdOjIK7xM">this podcast episode</a>.
+        >
+        or
+        <a
+          href="https://bitcoinmagazine.com/technical/statechains-sending-keys-not-coins-to-scale-bitcoin-off-chain"
+          >this more approachable explanation</a
+        >, or listen to
+        <a href="https://www.youtube.com/watch?v=2XLdOjIK7xM"
+          >this podcast episode</a
+        >.
         <br />
         Statechains can be used:
         <ul>
@@ -97,18 +107,20 @@
           </li>
           <li>
             To open Lightning channels on top of these UTXOs. And then these
-            channels can be used or transferred to others without the chain being touched.
+            channels can be used or transferred to others without the chain
+            being touched.
           </li>
           <li>
-            To do any fancy thing that involves UTXO ownership (RGB or DLCs, for example), but off-chain.
+            To do any fancy thing that involves UTXO ownership (RGB or DLCs, for
+            example), but off-chain.
           </li>
         </ul>
       </li>
     </ul>
   </li>
   <li>
-    <b>Covenants</b>, a way to make sure <b>one transaction can only be spent by an
-    specific other</b> can be
+    <b>Covenants</b>, a way to make sure
+    <b>one transaction can only be spent by an specific other</b> can be
     achieved using
     <a
       href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-June/017036.html"
@@ -123,25 +135,40 @@
     <ul>
       <li>
         <a href="https://www.youtube.com/watch?v=N2ow4Q34Jeg">Spacechains</a>,
-        blindly merge-mined blockchains that enhance the Bitcoin ecosystem because
-        despite them not having a 2-way peg mechanism, they also don't have a speculative
-        altcoin in them.
-
-        Watch <a href="https://www.youtube.com/watch?v=N2ow4Q34Jeg">the presentation</a>, read <a href="https://gist.github.com/RubenSomsen/5e4be6d18e5fa526b17d8b34906b16a5">the brief BMM explanation</a> or <a href="https://t.me/spacechains">join the Telegram group</a>.
+        blindly merge-mined blockchains that enhance the Bitcoin ecosystem
+        because despite them not having a 2-way peg mechanism, they also don't
+        have a speculative altcoin in them. Watch
+        <a href="https://www.youtube.com/watch?v=N2ow4Q34Jeg"
+          >the presentation</a
+        >, read
+        <a
+          href="https://gist.github.com/RubenSomsen/5e4be6d18e5fa526b17d8b34906b16a5"
+          >the brief BMM explanation</a
+        >
+        or <a href="https://t.me/spacechains">join the Telegram group</a>.
 
         <br />
 
         With Spacechains we can do
 
         <ul>
-          <li>A chain for all kinds of assets issued by entities or individuals;</li>
-          <li>A DNS chain that solves Zooko's triangle without needing an altcoin;</li>
+          <li>
+            A chain for all kinds of assets issued by entities or individuals;
+          </li>
+          <li>
+            A DNS chain that solves Zooko's triangle without needing an altcoin;
+          </li>
           <li>A chain that executes Ethereum-like smart-contracts;</li>
-          <li>A chain with BTC IOU tokens in it, guaranteed by an entity, by hashrate escrows, some magical zero-knowledge proof system or some other complex mechanism yet to be invented;</li>
+          <li>
+            A chain with BTC IOU tokens in it, guaranteed by an entity, by
+            hashrate escrows, some magical zero-knowledge proof system or some
+            other complex mechanism yet to be invented;
+          </li>
           <li>A chain with all of the above;</li>
         </ul>
 
-        All without burdening Bitcoin users and at the same time paying fees to miners who don't even have to be aware these things exist.
+        All without burdening Bitcoin users and at the same time paying fees to
+        miners who don't even have to be aware these things exist.
       </li>
       <li>
         Safer
@@ -149,6 +176,12 @@
           href="https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/"
           >Bitcoin Vaults</a
         >.
+      </li>
+      <li>
+        Replaces and improves the convoluted
+        <a href="https://bips.xyz/301">BIP301</a> with a native, simple blind
+        merged-mining scheme that requires zero setup or new software from
+        mining nodes.
       </li>
     </ul>
   </li>
