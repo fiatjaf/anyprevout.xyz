@@ -11,8 +11,7 @@
   <a href="https://bips.xyz/118">BIP-118</a>
   (previously named <code>SIGHASH_NOINPUT</code>), is a soft-fork that allows a
   transaction to be signed without reference to any specific previous output,
-  such that any output with a matching signature can be dynamically added
-  later.
+  such that any output with a matching signature can be dynamically added later.
 </p>
 
 <h2>Use Cases</h2>
@@ -29,12 +28,11 @@
       href="https://www.mail-archive.com/bitcoin-development@lists.sourceforge.net/msg07882.html"
       >Satoshi's vision for <code>nSequence</code></a
     >
-    by allowing peers to exchange presigned transactions off-chain with increased
-    sequence numbers such that only the latest one can be published to the
-    chain. Read
+    by allowing peers to exchange presigned transactions off-chain with
+    increased sequence numbers such that only the latest one can be published to
+    the chain. Read
     <a href="https://blockstream.com/eltoo.pdf">the whitepaper</a> or this
-    <a href="https://fiatjaf.com/ffdfe772.html"
-      >more approachable explanation</a
+    <a href="https://fiatjaf.com/ffdfe772.html">more approachable explanation</a
     >, or listen to
     <a
       href="https://bitcoinmagazine.com/technical/how-sighash-anyprevout-and-eltoo-could-improve-the-lightning-network"
@@ -196,22 +194,27 @@
     >.
   </li>
   <li>
-    <input type="checkbox" checked /> Have the benefits and tradeoffs of the change
-    explained in clear form and acknowledged by anyone who may be interested
-    (this website is an attempt at this).
+    <input type="checkbox" checked /> Have the benefits and tradeoffs of the
+    change explained in clear form and acknowledged by anyone who may be
+    interested (this website is an attempt at this).
   </li>
   <li>
-    <input type="checkbox" /> Get working
-    <a
-      href="https://github.com/bitcoin/bitcoin/compare/master...ajtowns:202101-anyprevout"
-      >(?)</a
+    <input type="checkbox" checked />
+    <a href="https://github.com/bitcoin-inquisition/bitcoin/pull/4"
+      >Get working code for it.</a
     >
-    code for it.
   </li>
-  <li><input type="checkbox" /> Make a testnet for it.</li>
   <li>
-    <input type="checkbox" /> (Who knows what has to happen for something to be
-    soft-forked in, but let's hope at this point
+    <input type="checkbox" checked />
+    Make a testnet for it. (<a
+      href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-December/021275.html"
+      >it is live on signet</a
+    >)
+  </li>
+  <li>
+    <input type="checkbox" />
+    (Who knows what has to happen for something to be soft-forked in, but let's
+    hope at this point
     <a href="https://taprootactivation.com/"
       >miners will push for it themselves</a
     >
@@ -223,8 +226,8 @@
   <p>
     If you want to include or fix something in this website or you have any
     suggestions or criticism, go to
-    <a href="https://github.com/fiatjaf/bip118">the GitHub repo</a> or talk
-    about it on <a href="https://t.me/lightningd">Tele</a
-    ><a href="https://t.me/spacechains">gram</a>.
+    <a href="https://github.com/fiatjaf/anyprevout.xyz">the GitHub repo</a> or
+    talk about it on <a href="https://t.me/spacechains">Telegram</a> or
+    <a href="https://web.libera.chat/##eltoo">IRC</a>.
   </p>
 </footer>
