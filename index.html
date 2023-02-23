@@ -23,8 +23,7 @@
 
 <ul>
   <li>
-    <b>Eltoo</b> (or, more clearly, <em>LN Symmetry</em>), a protocol that
-    fulfills
+    <b>Eltoo</b>, a scheme that fulfills
     <a
       href="https://www.mail-archive.com/bitcoin-development@lists.sourceforge.net/msg07882.html"
       >Satoshi's vision for <code>nSequence</code></a
@@ -152,6 +151,19 @@
     These covenants enable very important things such as:
     <ul>
       <li>
+        Safer
+        <a
+          href="https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/"
+          >Bitcoin Vaults</a
+        >.
+        <dd>
+          Here is a
+          <a href="https://github.com/darosior/simple-anyprevout-vault"
+            >prototype implementation</a
+          >.
+        </dd>
+      </li>
+      <li>
         <a href="https://www.youtube.com/watch?v=N2ow4Q34Jeg">Spacechains</a>,
         blindly merge-mined blockchains that enhance the Bitcoin ecosystem
         because despite them not having a 2-way peg mechanism, they also don't
@@ -188,28 +200,22 @@
         All without burdening Bitcoin users and at the same time paying fees to
         miners who don't even have to be aware these things exist.
 
-        <br />
-        There is a
-        <a href="https://github.com/supertestnet/spacechain-launcher"
-          >spacechain prototype</a
-        >
-        using a much worse set of tradeoffs here.
-      </li>
-      <li>
-        Safer
-        <a
-          href="https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/"
-          >Bitcoin Vaults</a
-        >. Here is a
-        <a href="https://github.com/darosior/simple-anyprevout-vault"
-          >prototype implementation</a
-        >.
+        <dd>
+          There is a
+          <a href="https://github.com/supertestnet/spacechain-launcher"
+            >spacechain prototype</a
+          >
+          using a much worse set of tradeoffs.
+        </dd>
       </li>
       <li>
         Replaces and improves the convoluted
-        <a href="https://bips.xyz/301">BIP301</a> with a native, simple blind
-        merged-mining scheme that requires zero setup or new software from
-        mining nodes.
+        <a href="https://bips.xyz/301">BIP301</a> with a native,
+        <a
+          href="https://gist.github.com/RubenSomsen/5e4be6d18e5fa526b17d8b34906b16a5"
+          >simple blind merged-mining scheme</a
+        >
+        that requires zero setup or new software from mining nodes.
       </li>
     </ul>
   </li>
